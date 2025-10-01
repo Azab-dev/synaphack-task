@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0b1020;
+  --card: #0f1629;
+  --foreground: #e6edf3;
+  --muted: #9fb0c7;
+  --primary: #3b82f6;
+}
+
+html, body, #__next {
+  height: 100%;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+.container {
+  @apply mx-auto px-4 max-w-6xl;
+}
+
+.card {
+  @apply bg-[var(--card)] rounded-lg border border-slate-800 shadow;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors;
+}
+
+.btn-primary {
+  @apply btn bg-[var(--primary)] text-white hover:bg-blue-500;
+}
+
+.btn-secondary {
+  @apply btn bg-slate-700 text-white hover:bg-slate-600;
+}
+
+.input {
+  @apply w-full rounded-md border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-[var(--foreground)] placeholder-slate-500 outline-none focus:ring-2 focus:ring-blue-600;
+}
+
+.label {
+  @apply text-sm text-[var(--muted)] mb-1 block;
+}
+
+.page-title {
+  @apply text-2xl md:text-3xl font-semibold;
+}
